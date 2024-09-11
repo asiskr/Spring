@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Defining the Add bean -->
+	<bean id="Add" class="com.spring.Add">
+		<constructor-arg index="0" value="14"/>
+		<constructor-arg index="1" value="58"/>
+		<property name="age" value="67"/>
+		<property name="sub" ref="sub"/>
+	</bean>
+
+	<!-- Defining the Sub bean -->
+	<bean id="sub" class="com.spring.Sub"/>
+	
+</beans>
